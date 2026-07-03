@@ -1,8 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/api/index"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "sun_ephemeris_web_api.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "sun_ephemeris_web_api.py"
+    }
+  ]
 }

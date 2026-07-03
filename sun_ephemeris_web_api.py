@@ -8,6 +8,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse
 
 # Astropy and SunPy imports
+import os
+# Átirányítjuk a cache-t az egyetlen írható Vercel mappába
+os.environ['ASTROPY_CACHE_DIR'] = '/tmp/astropy'
+from astropy.utils import iers
+iers.conf.auto_download = False
+iers.conf.auto_max_age = None
+
 import astropy.units as u
 from astropy.time import Time
 from astropy.coordinates import EarthLocation, AltAz, get_sun
