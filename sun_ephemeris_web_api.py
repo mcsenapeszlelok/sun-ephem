@@ -11,6 +11,10 @@ from fastapi.responses import HTMLResponse, JSONResponse
 import os
 # Átirányítjuk a cache-t az egyetlen írható Vercel mappába
 os.environ['ASTROPY_CACHE_DIR'] = '/tmp/astropy'
+os.environ['SUNPY_CONFIGDIR'] = '/tmp/sunpy/config'
+os.environ['SUNPY_CACHEDIR'] = '/tmp/sunpy/cache'
+os.environ['HOME'] = '/tmp'  # Sok könyvtár a $HOME/.config alá akar írni alapértelmezetten
+
 from astropy.utils import iers
 iers.conf.auto_download = False
 iers.conf.auto_max_age = None
