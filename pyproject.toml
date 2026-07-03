@@ -1,2 +1,2 @@
 [tool.vercel]
-entrypoint = "my_package.api:app"
+entrypoint = "sun_ephemeris_web_api.py:app"
