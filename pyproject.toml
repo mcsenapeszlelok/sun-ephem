@@ -3,7 +3,7 @@ name = "nap-efemerisz-api"
 version = "1.0.0"
 #requires-python = "==3.14.4"  # Pinning strictly to 3.14.4
 # Or use dependencies if you want to allow future patches:
-requires-python = ">=3.14.1
+requires-python = ">=3.14.1"
 
 [tool.vercel]
 entrypoint = "sun_ephemeris_web_api:app"
